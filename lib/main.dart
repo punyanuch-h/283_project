@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:wender1/page/login_page.dart';
-import 'package:wender1/page/home_page.dart';
-
+// import 'package:phrase2/screens/discovery.dart'; // DiscoveryPage
+import 'screens/ticket.dart'; // TicketPage
+// import 'package:phrase2/screens/detail.dart'; //DetailsPage
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: const Color.fromARGB(255, 116, 129, 152),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: HomePage(), // เปลี่ยนจาก LoginPage() เป็น HomePage()
+      home: const TicketPage(), 
     );
   }
 }
